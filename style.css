@@ -1,0 +1,110 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(180deg, #C973FF, #AEBAF8);
+}
+
+.container {
+    margin: 70px auto;
+    width: 300px;
+    height: 450px;
+    background: linear-gradient(45deg, #AEBAF8, #C973FF);
+    text-align: center;
+    box-shadow: 5px 5px 8px grey;
+    border-radius: 10px;
+}
+
+#header-text {
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+#input {
+    background: white;
+    border: 0;
+    border-left: 5px solid #C973FF;
+    padding: 5px;
+}
+
+#input:focus {
+    border: 0;
+    border-left: 5px solid #AEBAF8;
+    outline: none;
+}
+
+#error-text {
+    font-size: 13px;
+    color: #f76868;
+    width: max-content;
+    margin: 0 auto;
+}
+
+#btn {
+    padding: 5px 10px;
+    border: 2px solid white;
+    color: white;
+    text-transform: unset;
+    font-weight: bold;
+    margin: 5px;
+    transition: 1s;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    background: #AEBAF8;
+}
+
+#list {
+    background: #e2f3f5;
+    height: 250px;
+    overflow: scroll;
+    padding: 20px 0 0 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.list-item {
+    padding: 10px 15px;
+    margin: 10px 20px;
+    height: 40px;
+    color: black;
+    list-style: none;
+    clear: both;
+    transition: 1s ease-in-out;
+    background: white;
+    border-radius: 2px;
+}
+
+.list-text {
+    float: left;
+    text-align: left;
+    font-size: 17px;
+}
+
+.list-text span {
+    font-weight: bold;
+    /* margin-bottom: 20px; */
+}
+
+#date-text {
+    font-size: 12px;
+    margin: 5px 0 0 0;
+    color: #bbb;
+    text-align: left;
+}
+
+#action-btn {
+    margin-top: 10px;
+    float: right;
+}
+
+#action-btn i {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+#action-btn .icon {
+    width: 20px; height: 20px;
+    color: #f76868;
+}
