@@ -1,110 +1,73 @@
-* { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+* { 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0; padding: 0; box-sizing: border-box; color: #42606d;
+}
 
 body {
-    height: 100vh;
-    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    width: 100%; height: 100vh; padding-top: 30px; gap: 30px; flex-direction: column;
     display: flex; align-items: center; justify-content: center;
 }
 
-.container {
-    width: 300px;
-    height: 450px;
-    background: #fff;
-    text-align: center;
-    box-shadow: 10px 10px #FF057C;
-    border-radius: 10px;
-    overflow: hidden;
+.frame {
+    width: 400px; height: 400px; background: rgb(174,202,238);
+    background: linear-gradient(90deg, 
+    rgba(174,202,238,1) 0%, 
+    rgba(255,210,210,1) 100%);
+    border-radius: 5px; box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.473);
+    display: flex; align-items: center; justify-content: center;
 }
 
-#header-text {
-    padding-top: 20px;
-    font-weight: bold;
+.container { 
+    width: 60%; height: 70%; background-color: #fff; border-radius: 3px; 
+    box-shadow: 5px 10px 20px rgba(128, 128, 128, 0.473); padding: 25px 35px; 
+    display: flex; justify-content: space-evenly; flex-direction: column; 
+    min-width: 260px;
 }
 
-#input {
-    background: #e2f3f5;
-    border: 0;
-    border-left: 5px solid #FF057C;
-    padding: 5px;
+.day-box { text-align: center; }
+
+.day-box #day { font-weight: 600; font-size: 22px; }
+
+.day-box #date { font-size: 13px; font-weight: 400; margin-top: 3px; }
+
+.input { display: flex; margin-top: 15px; }
+
+#input { background: #F6F1F1; border: 0; padding: 10px; border-radius: 5px; }
+
+#input:focus { outline: none; }
+
+#error-text { font-size: 10px; color: #f76868; width: max-content; margin: 5px auto;
 }
 
-#input:focus {
-    outline: none;
-}
-
-#error-text {
-    font-size: 13px;
-    color: #f76868;
-    width: max-content;
-    margin: 0 auto;
-}
+.add-box { display: flex; justify-content: center;}
 
 #btn {
-    padding: 5px 10px;
-    border: 2px solid #fff;
-    color: #fff;
-    text-transform: unset;
-    font-weight: bold;
-    margin: 5px;
-    transition: 1s;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    background: #FF057C;
+    padding: 5px 5px; border: none; color: #fff; transition: 1s;
+    font-size: 20px; cursor: pointer; background: #92baec;
+    border-radius: 5px; margin-left: -10px;
 }
 
-#list {
-    background: #e2f3f5;
-    height: 250px;
-    overflow: scroll;
-    padding: 20px 0 0 0;
+#lists { overflow: scroll; }
+
+::-webkit-scrollbar { display: none; }
+
+.tasks {
+    display: flex; justify-content: space-evenly; align-items: center; font-size: 13px; font-weight: 400;
+    text-transform: lowercase; margin-top: 13px;
 }
 
-::-webkit-scrollbar {
-    display: none;
+::first-letter { text-transform: uppercase; }
+
+label { width: calc(100% - 15px); transition: 1s; }
+
+input:checked ~ label {
+    text-decoration: line-through; opacity: 0.5; font-style: italic; transition: 1s;
 }
 
-.list-item {
-    padding: 10px 15px;
-    margin: 10px 20px;
-    height: 40px;
-    color: black;
-    list-style: none;
-    clear: both;
-    transition: 1s ease-in-out;
-    background: #fff;
-    border-radius: 2px;
+input[type="checkbox"] {
+    width: 15px; height: 15px; accent-color: #92baec; transition: 1s; margin-right: 5px;
 }
 
-.list-text {
-    float: left;
-    text-align: left;
-    font-size: 17px;
-}
-
-.list-text span {
-    font-weight: bold;
-    /* margin-bottom: 20px; */
-}
-
-#date-text {
-    font-size: 12px;
-    margin: 5px 0 0 0;
-    color: #bbb;
-    text-align: left;
-}
-
-#action-btn {
-    margin-top: 10px;
-    float: right;
-}
-
-#action-btn i {
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-#action-btn .icon {
-    width: 20px; height: 20px;
-    color: #f76868;
-}
+#action { margin-top: 5px; float: right; }
+#action i { cursor: pointer; margin-right: 5px; }
+#action .icon { width: 15px; height: 15px; color: #f76868; }
